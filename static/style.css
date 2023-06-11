@@ -1,0 +1,16 @@
+body {
+    background-color: #55B4DD;
+    text-align: center;
+}
+
+button {
+    background-color: #ffb3da;
+    width: 100px;
+    height: 34px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+   font-family: 'MegrimMedium';
+   font-weight: normal;
+   font-style: normal;
+   }

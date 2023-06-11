@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_2.css') }}">
+</head>
+<body>
+    <h1>Add Task</h1>
+    <form action="{{ url_for('add_task') }}" method="POST">
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+            <option value="">Select an existing topic</option>
+            {% for topic in topics %}
+            <option value="{{ topic.name }}">{{ topic.name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="new_topic">Or enter a new topic:</label>
+        <input type="text" id="new_topic" name="new_topic"><br>
+
+        <label for="task_name">Task Name:</label>
+        <input type="text" id="task_name" name="task_name" required><br>
+
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required><br>
+
+        <label for="importance">Importance:</label>
+        <input type="number" id="importance" name="importance" step="0.1" required><br>
+
+        <label for="related_task">Related Task:</label>
+        <select id="related_task" name="related_task">
+            <option value="">None</option>
+            <!-- Add options for related tasks if needed -->
+        </select><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Add Task">
+    </form>
+</body>
+</html>
