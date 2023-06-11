@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form action="{{ url_for('registration') }}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <!-- Add more fields for registration if needed -->
+
+        <input type="submit" value="registration">
+    </form>
+</body>
+</html>
